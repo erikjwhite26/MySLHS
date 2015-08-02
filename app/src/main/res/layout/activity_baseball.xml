@@ -1,0 +1,162 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.thewhites.myslhs.Baseball"
+    android:background="#ff000000">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shorelandLogo"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/shoreland_logo"
+        android:layout_alignParentStart="true"
+        android:background="#ffffffff"
+        android:clickable="false"
+        android:contentDescription="@string/shoreland_logo"
+        android:focusable="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/subStatement"
+        android:id="@+id/subStatement"
+        android:textColor="#ff000000"
+        android:background="#ffffb800"
+        android:textSize="10pt"
+        android:textStyle="bold|italic"
+        android:layout_below="@+id/shorelandLogo"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal" />
+
+    <RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+        android:visibility="invisible"
+    android:background="#ff000000"
+    android:id="@+id/RosterLayout"
+        android:layout_below="@+id/subStatement">
+
+</RelativeLayout>
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/subStatement"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/baseball_backround"
+        android:id="@+id/standard_layout">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/roster"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/roster_icon_white"
+            android:padding="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:background="#00ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Roster"
+            android:id="@+id/roster_text"
+            android:layout_below="@+id/roster"
+            android:layout_alignLeft="@+id/roster"
+            android:layout_alignRight="@+id/roster"
+            android:gravity="center_horizontal"
+            android:textSize="12pt"
+            android:textColor="#ffffff" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/schedule"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="false"
+            android:layout_alignTop="@+id/roster"
+            android:src="@drawable/clock_icon_white"
+            android:padding="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="30dp"
+            android:background="#00ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Schedule"
+            android:id="@+id/schedule_text"
+            android:layout_below="@+id/schedule"
+            android:layout_alignLeft="@+id/schedule"
+            android:layout_alignRight="@+id/schedule"
+            android:gravity="center_horizontal"
+            android:textSize="12pt"
+            android:textColor="#ffffff" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/calendar"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="false"
+            android:src="@drawable/calendar_icon"
+            android:padding="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:background="#00ffffff"
+            android:baselineAlignBottom="false"
+            android:layout_alignParentBottom="false"
+            android:layout_above="@+id/calendar_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calendar"
+            android:id="@+id/calendar_text"
+            android:layout_alignLeft="@+id/calendar"
+            android:layout_alignRight="@+id/calendar"
+            android:gravity="center_horizontal"
+            android:textSize="12pt"
+            android:textColor="#ff000000"
+            android:layout_marginBottom="110dp"
+            android:layout_alignParentBottom="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/news"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="false"
+            android:src="@drawable/news_icon"
+            android:padding="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="#00ffffff"
+            android:baselineAlignBottom="false"
+            android:layout_alignParentBottom="false"
+            android:layout_above="@+id/news_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="News"
+            android:id="@+id/news_text"
+            android:layout_alignLeft="@+id/news"
+            android:layout_alignRight="@+id/news"
+            android:gravity="center_horizontal"
+            android:textSize="12pt"
+            android:textColor="#ff000000"
+            android:layout_marginBottom="110dp"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</RelativeLayout>
+
+

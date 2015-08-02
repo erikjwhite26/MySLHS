@@ -1,0 +1,468 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity"
+    android:background="#ff000000"
+    android:nestedScrollingEnabled="false">
+
+    <ImageView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:id="@+id/shorelandLogo"
+    android:src="@drawable/shoreland_logo"
+    android:background="#ffffffff"
+    android:clickable="false"
+    android:contentDescription="@string/shoreland_logo"
+    android:focusable="true" />
+
+    <TextView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/subStatement"
+    android:id="@+id/subStatement"
+    android:textColor="#ff000000"
+    android:background="#ffffb800"
+    android:textSize="10pt"
+    android:textStyle="bold|italic"
+        android:gravity="center_horizontal"
+        android:layout_weight=".5"
+        android:layout_below="@+id/shorelandLogo" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="225dp"
+        android:id="@+id/ss"
+        android:layout_below="@+id/subStatement">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:id="@+id/ssLeft">
+
+            <ViewFlipper
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:id="@+id/viewFlipperTL"
+                android:autoStart="true"
+                android:flipInterval="2000"
+                android:layout_weight="1"
+                android:layout_below="@+id/subStatement">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/home_one_tl"
+                        android:contentDescription="@string/images"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/home_two_tl"
+                        android:contentDescription="@string/images"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/home_three_tl"
+                        android:contentDescription="@string/images"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/home_four_tl"
+                        android:contentDescription="@string/images"/>
+                </RelativeLayout>
+
+            </ViewFlipper>
+
+            <ViewFlipper
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:id="@+id/viewFlipperBL"
+                android:autoStart="true"
+                android:flipInterval="2000"
+                android:layout_weight="1"
+                android:layout_below="@+id/subStatement" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/home_one_bl"
+                        android:contentDescription="@string/images" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/home_two_bl"
+                        android:contentDescription="@string/images" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/home_three_bl"
+                        android:contentDescription="@string/images" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/home_four_bl"
+                        android:contentDescription="@string/images" />
+                </RelativeLayout>
+            </ViewFlipper>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:id="@+id/ssRight">
+
+            <ViewFlipper
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:id="@+id/viewFlipperTR"
+                android:autoStart="true"
+                android:flipInterval="2000"
+                android:layout_weight="1"
+                android:layout_below="@+id/subStatement" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/home_one_tr"
+                        android:contentDescription="@string/images" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/home_two_tr"
+                        android:contentDescription="@string/images" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/home_three_tr"
+                        android:contentDescription="@string/images" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/home_four_tr"
+                        android:contentDescription="@string/images" />
+                </RelativeLayout>
+            </ViewFlipper>
+
+            <ViewFlipper
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:id="@+id/viewFlipperBR"
+                android:autoStart="true"
+                android:flipInterval="2000"
+                android:layout_weight="1"
+                android:layout_below="@+id/subStatement" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/home_one_br"
+                        android:contentDescription="@string/images" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/home_two_br"
+                        android:contentDescription="@string/images" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/home_three_br"
+                        android:contentDescription="@string/images" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/home_four_br"
+                        android:contentDescription="@string/images" />
+                </RelativeLayout>
+            </ViewFlipper>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+        android:id="@+id/menu"
+        android:layout_above="@+id/bottom_menu"
+        android:layout_below="@+id/ss">
+
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:id="@+id/menuButtons"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/left"
+            android:gravity="center_horizontal"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:text="@string/about_slhs"
+                android:id="@+id/aboutSLHS"
+                android:enabled="true"
+                android:background="@drawable/menu_buttons"
+                style="@style/button_top"
+                android:textAllCaps="false"
+                
+                android:layout_weight=".33" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:text="@string/admissions"
+                android:id="@+id/admissions"
+                android:enabled="true"
+                android:background="@drawable/menu_buttons"
+                style="@style/button_middle"
+                android:textAllCaps="false"
+                
+                android:layout_weight=".33" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:text="@string/academics"
+                android:id="@+id/academics"
+                android:enabled="true"
+                android:background="@drawable/menu_buttons"
+                style="@style/button_bottom"
+                android:textAllCaps="false"
+                android:paddingBottom="10dp"
+                
+                android:layout_weight=".33" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/right"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:text="@string/athletics"
+                android:id="@+id/athletics"
+                android:enabled="true"
+                android:background="@drawable/menu_buttons"
+                style="@style/button_top"
+                
+                android:textAllCaps="false"
+                android:layout_weight=".33" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:text="@string/calendar"
+                android:id="@+id/calendar"
+                android:enabled="true"
+                android:background="@drawable/menu_buttons"
+                style="@style/button_middle"
+                android:textAllCaps="false"
+                
+                android:layout_weight=".33" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:text="@string/announcements"
+                android:id="@+id/announcements"
+                android:enabled="true"
+                android:background="@drawable/menu_buttons"
+                style="@style/button_bottom"
+                android:textAllCaps="false"
+                
+                android:layout_weight=".33" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffb800"
+        android:id="@+id/bottom_menu"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:text="@string/address"
+        android:id="@+id/slhsAddress"
+        android:textColor="#ff000000"
+        android:layout_weight="0.74"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:onClick="showCallingDialog" />
+
+        <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/directions"
+        android:id="@+id/directions"
+        android:singleLine="false"
+        android:textColor="#ffffb800"
+        android:background="@drawable/directions_button"
+        style="@style/button_directions"
+        android:layout_weight="1"
+        android:layout_margin="5dp"
+         />
+    </LinearLayout>
+
+</RelativeLayout>

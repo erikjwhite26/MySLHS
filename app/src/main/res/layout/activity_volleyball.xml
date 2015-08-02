@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.thewhites.myslhs.Baseball"
+    android:background="#ff000000">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shorelandLogo"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/shoreland_logo"
+        android:layout_alignParentStart="true"
+        android:background="#ffffffff"
+        android:clickable="false"
+        android:contentDescription="@string/shoreland_logo"
+        android:focusable="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/subStatement"
+        android:id="@+id/subStatement"
+        android:textColor="#ff000000"
+        android:background="#ffffb800"
+        android:textSize="10pt"
+        android:textStyle="bold|italic"
+        android:layout_below="@+id/shorelandLogo"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linearLayout15">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="63dp"
+            android:text="@string/calendar"
+            android:id="@+id/volleyballCalendar"
+            android:background="@drawable/menu_buttons"
+            style="@style/button_bottoms3"
+            android:textAllCaps="false"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight=".33" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="63dp"
+            android:text="@string/roster"
+            android:id="@+id/volleyballRoster"
+            android:background="@drawable/menu_buttons"
+            style="@style/button_bottoms3"
+            android:textAllCaps="false"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight=".33" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="63dp"
+            android:text="@string/news"
+            android:id="@+id/volleyballNews"
+            android:background="@drawable/menu_buttons"
+            style="@style/button_bottoms3"
+            android:textAllCaps="false"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_weight=".33" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="invisible"
+        android:background="#ff000000"
+        android:id="@+id/volleyballRosterLayout"
+        android:layout_above="@+id/linearLayout15"
+        android:layout_below="@+id/subStatement">
+
+        <WebView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/volleyballRosterView"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/subStatement"
+        android:layout_above="@+id/linearLayout15"
+        android:background="@drawable/volleyball_backround"></RelativeLayout>
+
+</RelativeLayout>

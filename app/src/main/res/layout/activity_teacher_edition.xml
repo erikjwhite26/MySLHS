@@ -1,0 +1,221 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.thewhites.myslhs.TeacherEdition"
+    android:background="#ff000000">
+
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shorelandLogo"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/shoreland_logo"
+        android:layout_alignParentStart="true"
+        android:background="#ffffffff"
+        android:clickable="false"
+        android:contentDescription="@string/shoreland_logo"
+        android:focusable="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="26dp"
+        android:id="@+id/yellowBackround"
+        android:background="#ffffb800"
+        android:layout_below="@+id/shorelandLogo"
+        android:nestedScrollingEnabled="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/subStatement"
+        android:id="@+id/subStatement"
+        android:textColor="#ff000000"
+        android:background="#ffffb800"
+        android:textSize="10pt"
+        android:textStyle="bold|italic"
+        android:layout_below="@+id/shorelandLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/yellowBackround" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/yellowBackround">
+
+        <ViewFlipper
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:id="@+id/viewFlipper2"
+            android:autoStart="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/subStatement"
+            android:flipInterval="2000"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/home_image_one"
+                    android:contentDescription="@string/images"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/home_image_two"
+                    android:contentDescription="@string/images"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/home_image_three"
+                    android:contentDescription="@string/images" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/home_image_four"
+                    android:contentDescription="@string/images" />
+            </RelativeLayout>
+        </ViewFlipper>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentStart="true"
+            android:id="@+id/menuButtons"
+            android:layout_below="@+id/viewFlipper2"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/left"
+                android:gravity="center_horizontal"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:text="@string/enter_grades"
+                    android:id="@+id/enterGrades"
+                    android:enabled="true"
+                    android:background="@drawable/menu_buttons"
+                    style="@style/button_top"
+                    android:textAllCaps="false"
+                    android:layout_weight=".33" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:text="@string/lesson_planner"
+                    android:id="@+id/lessonPlanner"
+                    android:enabled="true"
+                    android:background="@drawable/menu_buttons"
+                    style="@style/button_middle"
+                    android:textAllCaps="false"
+                    android:layout_weight=".33" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:text="@string/google_classroom"
+                    android:id="@+id/googleClassroom"
+                    android:enabled="true"
+                    android:background="@drawable/menu_buttons"
+                    style="@style/button_bottom"
+                    android:textAllCaps="false"
+                    android:paddingBottom="10dp"
+                    android:layout_weight=".33" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/right"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:text="@string/seating"
+                    android:id="@+id/seating"
+                    android:enabled="true"
+                    android:background="@drawable/menu_buttons"
+                    style="@style/button_top"
+                    android:textAllCaps="false"
+                    android:layout_weight=".33" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:text="@string/event_planner"
+                    android:id="@+id/eventPlanner"
+                    android:enabled="true"
+                    android:background="@drawable/menu_buttons"
+                    style="@style/button_middle"
+                    android:textAllCaps="false"
+                    android:layout_weight=".33" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:text="@string/moodle"
+                    android:id="@+id/moodle"
+                    android:enabled="true"
+                    android:background="@drawable/menu_buttons"
+                    style="@style/button_bottom"
+                    android:textAllCaps="false"
+                    android:layout_weight=".33" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

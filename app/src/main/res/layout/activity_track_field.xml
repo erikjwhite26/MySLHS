@@ -1,0 +1,217 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.thewhites.myslhs.Baseball"
+    android:background="@drawable/track_and_field_backround">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shorelandLogo"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/shoreland_logo"
+        android:background="#ffffffff"
+        android:clickable="false"
+        android:contentDescription="@string/shoreland_logo"
+        android:focusable="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/subStatement"
+        android:id="@+id/subStatement"
+        android:textColor="#ff000000"
+        android:background="#ffffb800"
+        android:textSize="10pt"
+        android:textStyle="bold|italic"
+        android:layout_below="@+id/shorelandLogo"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/meetSignUp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@+id/recoveryRun"
+        android:layout_alignTop="@+id/recoveryRun"
+        android:background="@drawable/sports_icons"
+        android:src="@drawable/sign_up_file" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meet Sign Up"
+        android:id="@+id/signUpLabel"
+        android:layout_below="@+id/meetSignUp"
+        android:layout_alignLeft="@+id/meetSignUp"
+        android:layout_alignRight="@+id/meetSignUp"
+        android:textSize="10pt"
+        android:textColor="#ffffff"
+        android:gravity="center_horizontal" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recoveryRun"
+        android:src="@drawable/recovery_run_file"
+        android:background="@drawable/sports_icons"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="false"
+        android:layout_above="@+id/recoveryLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recovery Run"
+        android:id="@+id/recoveryLabel"
+        android:layout_alignRight="@+id/recoveryRun"
+        android:layout_alignLeft="@+id/recoveryRun"
+        android:layout_marginBottom="150dp"
+        android:layout_alignParentBottom="true"
+        android:textSize="10pt"
+        android:textColor="#ffffff"
+        android:gravity="center_horizontal" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/proposal"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/recoveryRun"
+        android:layout_marginLeft="15dp"
+        android:layout_alignTop="@+id/recoveryRun"
+        android:background="@drawable/sports_icons"
+        android:src="@drawable/nominations_file" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pacer&apos;s Proposal"
+        android:id="@+id/proposalLabel"
+        android:layout_below="@+id/proposal"
+        android:layout_alignRight="@+id/proposal"
+        android:layout_alignLeft="@+id/proposal"
+        android:textSize="10pt"
+        android:textColor="#ffffff"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Person"
+        android:id="@+id/nominate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="71dp"
+        android:textSize="14pt"
+        android:layout_above="@+id/recoveryRun"
+        android:background="#ffffff"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reason"
+        android:id="@+id/nominate2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="71dp"
+        android:textSize="14pt"
+        android:layout_above="@+id/recoveryRun"
+        android:background="#ffffff"
+        android:visibility="invisible" />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linearLayout14">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="63dp"
+            android:text="@string/roster"
+            android:id="@+id/trackFieldCalendar"
+            android:background="@drawable/menu_buttons"
+            style="@style/button_bottoms3"
+            android:textAllCaps="false"
+            android:layout_weight=".33" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="63dp"
+            android:text="@string/calendar"
+            android:id="@+id/trackFieldHistory"
+            android:background="@drawable/menu_buttons"
+            style="@style/button_bottoms3"
+            android:textAllCaps="false"
+            android:layout_weight=".33" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="63dp"
+            android:text="@string/news"
+            android:id="@+id/trackFieldNews"
+            android:background="@drawable/menu_buttons"
+            style="@style/button_bottoms3"
+            android:textAllCaps="false"
+            android:layout_weight=".33" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="invisible"
+        android:background="#ff000000"
+        android:id="@+id/trackFieldHistoryLayout"
+        android:layout_above="@+id/linearLayout14"
+        android:layout_below="@+id/subStatement">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/baseball"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="invisible"
+        android:background="#ff000000"
+        android:id="@+id/trackFieldCalendarLayout"
+        android:layout_alignBottom="@+id/trackFieldHistoryLayout"
+        android:layout_below="@+id/subStatement">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/baseball"
+            android:id="@+id/textView10" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="invisible"
+            android:background="#ff000000"
+            android:id="@+id/trackFieldNewsLayout"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/baseball"
+                android:id="@+id/textView11" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

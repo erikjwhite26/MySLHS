@@ -1,0 +1,293 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.thewhites.myslhs.AppDevelopmentTeacher"
+    android:background="#ff000000">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shorelandLogo"
+        android:src="@drawable/shoreland_logo"
+        android:background="#ffffffff"
+        android:clickable="false"
+        android:contentDescription="@string/shoreland_logo"
+        android:focusable="true"
+        android:longClickable="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/subStatement"
+        android:id="@+id/subStatement"
+        android:textColor="#ff000000"
+        android:background="#ffffb800"
+        android:textSize="10pt"
+        android:textStyle="bold|italic"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/shorelandLogo"
+        android:gravity="center_horizontal" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@+id/subStatement">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:id="@+id/developerPortrait"
+                android:src="@drawable/tylerwhiteportrait"
+                android:contentDescription="@string/images"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="15dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/developer_name"
+                android:id="@+id/developerName"
+                android:textColor="#ffffb800"
+                android:textSize="18pt"
+                android:textStyle="bold"
+                android:layout_toEndOf="@+id/developerPortrait"
+                android:singleLine="false"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/developerRole"
+                android:id="@+id/developerRole"
+                android:textColor="#ffffb800"
+                android:textSize="10pt"
+                android:textStyle="normal"
+                android:layout_below="@+id/developerName"
+                android:layout_toEndOf="@+id/developerPortrait"
+                android:layout_marginLeft="7dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/slLogo"
+                android:src="@drawable/shoreland_elipse"
+                android:contentDescription="@string/images"
+                android:layout_marginLeft="32dp"
+                android:layout_below="@+id/developerRole"
+                android:layout_alignStart="@+id/developerRole"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about"
+                android:id="@+id/about"
+                android:layout_below="@+id/developerPortrait"
+                android:layout_alignParentStart="true"
+                android:textColor="#ffffffff"
+                android:textSize="18pt"
+                android:textStyle="italic"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:id="@+id/aboutUnderline"
+                android:layout_below="@+id/about"
+                android:layout_alignParentStart="true"
+                android:singleLine="true"
+                android:background="#ffffff"
+                android:layout_marginRight="100dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_app_info"
+                android:id="@+id/appInfo"
+                android:textColor="#ffb800"
+                android:textSize="12pt"
+                android:layout_below="@+id/aboutUnderline"
+                android:layout_marginTop="10dp" />
+
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/permissions"
+                android:id="@+id/permissions"
+                android:layout_below="@+id/appInfo"
+                android:layout_alignParentStart="true"
+                android:textColor="#ffffffff"
+                android:textSize="18pt"
+                android:textStyle="italic"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:id="@+id/permissionsUnderline"
+                android:layout_below="@+id/permissions"
+                android:layout_alignParentStart="true"
+                android:singleLine="true"
+                android:background="#ffffff"
+                android:layout_marginRight="100dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/permissions_info1"
+                android:id="@+id/permissionsInfo1"
+                android:textColor="#ffb800"
+                android:textSize="10pt"
+                android:layout_below="@+id/permissionsUnderline"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/permissions_info2"
+                android:id="@+id/permissionsInfo2"
+                android:textColor="#ffb800"
+                android:textSize="10pt"
+                android:layout_below="@+id/permissionsInfo1"
+                android:layout_marginTop="10dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/permissions_info3"
+                android:id="@+id/permissionsInfo3"
+                android:textColor="#ffb800"
+                android:textSize="10pt"
+                android:layout_below="@+id/permissionsInfo2"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/permissions_info4"
+                android:id="@+id/permissionsInfo4"
+                android:textColor="#ffb800"
+                android:textSize="10pt"
+                android:layout_below="@+id/permissionsInfo3"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/permissions_info5"
+                android:id="@+id/permissionsInfo5"
+                android:textColor="#ffb800"
+                android:textSize="10pt"
+                android:layout_below="@+id/permissionsInfo4"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_developer"
+                android:id="@+id/contact"
+                android:layout_alignParentStart="true"
+                android:textColor="#ffffffff"
+                android:textSize="18pt"
+                android:textStyle="italic"
+                android:layout_marginLeft="2dp"
+                android:layout_below="@+id/permissionsInfo5" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:id="@+id/contactUnderline"
+                android:layout_below="@+id/contact"
+                android:layout_alignParentStart="true"
+                android:singleLine="true"
+                android:background="#ffffff"
+                android:layout_marginRight="100dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/emailDeveloper"
+                android:id="@+id/contactInfo"
+                android:textColor="#ffb800"
+                android:textSize="12pt"
+                android:layout_below="@+id/contactUnderline"
+                android:layout_marginTop="10dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="@string/email_developer_now"
+                android:id="@+id/emailDeveloperNow"
+                android:textColor="#ff000000"
+                android:background="@drawable/email"
+                style="@style/button_directions"
+                android:layout_toRightOf="@+id/contactInfo"
+                android:layout_below="@+id/contactUnderline"
+                android:layout_alignBottom="@+id/contactInfo"
+                android:textSize="7.5pt" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/thanks"
+                android:id="@+id/thanks"
+                android:layout_alignParentStart="true"
+                android:textColor="#ffffffff"
+                android:textSize="18pt"
+                android:textStyle="italic"
+                android:layout_below="@+id/emailDeveloperNow"
+                android:layout_alignParentLeft="true" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:id="@+id/thanksUnderline"
+                android:singleLine="true"
+                android:background="#ffffff"
+                android:layout_marginRight="100dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/thanks" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/thanks_1"
+                android:id="@+id/thanksInfo1"
+                android:textColor="#ffb800"
+                android:textSize="12pt"
+                android:layout_below="@+id/thanksUnderline"
+                android:layout_alignParentLeft="false"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/thanks_2"
+                android:id="@+id/thanksInfo2"
+                android:textColor="#ffb800"
+                android:textSize="12pt"
+                android:layout_below="@+id/thanksInfo1"
+                android:layout_alignParentLeft="false"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

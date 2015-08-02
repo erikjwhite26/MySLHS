@@ -1,0 +1,605 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.thewhites.myslhs.Athletics"
+    android:background="#FF000000">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shorelandLogo"
+        android:src="@drawable/shoreland_logo"
+        android:background="#ffffffff"
+        android:clickable="false"
+        android:contentDescription="@string/shoreland_logo"
+        android:focusable="true"
+        android:longClickable="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:focusableInTouchMode="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/subStatement"
+        android:id="@+id/subStatement"
+        android:textColor="#ff000000"
+        android:background="#ffffb800"
+        android:textSize="10pt"
+        android:textStyle="bold|italic"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/shorelandLogo"
+        android:elegantTextHeight="false"
+        android:gravity="center_horizontal" />
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/athleticsLayout"
+        android:background="#ff000000"
+        android:layout_below="@+id/subStatement">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/standardLayout"
+            android:visibility="visible"
+            android:layout_alignParentTop="false" >
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollView2" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+                        android:id="@+id/slideAndButtons"
+                        android:measureWithLargestChild="true">
+                    <ViewFlipper
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:id="@+id/viewFlipperNormal"
+                        android:autoStart="true"
+                        android:flipInterval="2000"
+                        android:visibility="visible"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/home_image_one"
+                                android:contentDescription="@string/images" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/home_image_two"
+                                android:contentDescription="@string/images" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/home_image_three"
+                                android:contentDescription="@string/images" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/home_image_four"
+                                android:contentDescription="@string/images" />
+                        </RelativeLayout>
+                    </ViewFlipper>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="0dp"
+                            android:orientation="horizontal"
+                            android:id="@+id/normalButtons"
+                            android:gravity="center"
+                            android:layout_weight="1">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:id="@+id/leftNormal"
+                                android:gravity="center_horizontal"
+                                android:layout_marginRight="2dp"
+                                android:layout_weight="1">
+
+                                <Button
+                                    style="@style/button_top"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="0dp"
+                                    android:text="@string/athletics_directory"
+                                    android:id="@+id/athleticsDirectory1"
+                                    android:enabled="true"
+                                    android:background="@drawable/menu_buttons"
+                                    android:textAllCaps="false"
+                                    android:layout_weight=".33" />
+
+                                <Button
+                                    style="@style/button_middle"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="0dp"
+                                    android:text="@string/conference_directions"
+                                    android:id="@+id/athleticDirections1"
+                                    android:enabled="true"
+                                    android:textAllCaps="false"
+                                    android:background="@drawable/menu_buttons"
+                                    android:layout_weight=".33" />
+
+                                <Button
+                                    style="@style/button_bottom"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="0dp"
+                                    android:text="@string/athletics_apparel"
+                                    android:id="@+id/apparel1"
+                                    android:enabled="true"
+                                    android:textAllCaps="false"
+                                    android:background="@drawable/menu_buttons"
+                                    android:paddingBottom="10dp"
+                                    android:layout_weight=".33" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:id="@+id/rightNormal"
+                                android:gravity="center_horizontal"
+                                android:layout_marginLeft="2dp"
+                                android:layout_weight="1">
+
+                                <Button
+                                    style="@style/button_top"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="0dp"
+                                    android:text="@string/athletics_wissports"
+                                    android:id="@+id/wissports1"
+                                    android:textAllCaps="false"
+                                    android:enabled="true"
+                                    android:background="@drawable/menu_buttons"
+                                    android:layout_weight=".33" />
+
+                                <Button
+                                    style="@style/button_middle"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="0dp"
+                                    android:text="@string/calendar"
+                                    android:textAllCaps="false"
+                                    android:id="@+id/athleticsCalendar1"
+                                    android:enabled="true"
+                                    android:background="@drawable/menu_buttons"
+                                    android:layout_weight=".33" />
+
+                                <Button
+                                    style="@style/button_bottom"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="0dp"
+                                    android:text="@string/athletics_news"
+                                    android:textAllCaps="false"
+                                    android:id="@+id/athleticsNews1"
+                                    android:enabled="true"
+                                    android:background="@drawable/menu_buttons"
+                                    android:layout_weight=".33" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="5dp"
+                        android:id="@+id/yellowLine1"
+                        android:background="#ffffb800"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_alignParentBottom="false"
+                        android:layout_below="@+id/slideAndButtons" />
+
+                    <ImageView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:src="@drawable/conference_banners"
+    android:contentDescription="@string/images"
+    android:layout_below="@+id/yellowLine1"
+    android:id="@+id/conference_banner1"
+    android:layout_margin="10dp" />
+
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/directoryLayout"
+            android:visibility="invisible"
+            android:layout_alignParentTop="false">
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollView">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <ViewFlipper
+                        android:layout_width="fill_parent"
+                        android:layout_height="230dp"
+                        android:id="@+id/viewFlipperDirectory"
+                        android:autoStart="true"
+                        android:layout_alignParentStart="true"
+                        android:flipInterval="2000"
+                        android:visibility="visible" >
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/home_image_one"
+                                android:contentDescription="@string/images" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/home_image_two"
+                                android:contentDescription="@string/images" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/home_image_three"
+                                android:contentDescription="@string/images" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/home_image_four"
+                                android:contentDescription="@string/images" />
+                        </RelativeLayout>
+                    </ViewFlipper>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sports"
+                        android:layout_below="@+id/viewFlipperDirectory">
+
+                        <Button
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/baseball"
+                            android:id="@+id/baseball"
+                            android:background="@drawable/menu_buttons"
+                            style="@style/button_athletics_directory_top"
+                            android:textAllCaps="false"/>
+
+                        <Button
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/basketball_boys"
+                            android:id="@+id/basketballBoys"
+                            android:background="@drawable/menu_buttons"
+                            android:textAllCaps="false"
+                            style="@style/button_athletics_directory_middle" />
+
+                        <Button
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/basketball_girls"
+                            android:id="@+id/basketballGirls"
+                            android:background="@drawable/menu_buttons"
+                            android:textAllCaps="false"
+                            style="@style/button_athletics_directory_middle" />
+
+                        <Button
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cheer"
+                            android:id="@+id/cheer"
+                            android:background="@drawable/menu_buttons"
+                            android:textAllCaps="false"
+                            style="@style/button_athletics_directory_middle" />
+
+                        <Button
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cross_country"
+                            android:id="@+id/crossCountry"
+                            android:background="@drawable/menu_buttons"
+                            android:textAllCaps="false"
+                            style="@style/button_athletics_directory_middle" />
+
+                        <Button
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/football"
+                            android:id="@+id/football"
+                            android:background="@drawable/menu_buttons"
+                            android:textAllCaps="false"
+                            style="@style/button_athletics_directory_middle" />
+
+                        <Button
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/golf"
+                            android:id="@+id/golf"
+                            android:background="@drawable/menu_buttons"
+                            android:textAllCaps="false"
+                            style="@style/button_athletics_directory_middle" />
+
+                        <Button
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/soccer_boys"
+                            android:id="@+id/soccerBoys"
+                            android:background="@drawable/menu_buttons"
+                            android:textAllCaps="false"
+                            style="@style/button_athletics_directory_middle" />
+
+                        <Button
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/soccer_girls"
+                            android:id="@+id/soccerGirls"
+                            android:background="@drawable/menu_buttons"
+                            android:textAllCaps="false"
+                            style="@style/button_athletics_directory_middle" />
+
+                        <Button
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/softball"
+                            android:id="@+id/softball"
+                            android:background="@drawable/menu_buttons"
+                            android:textAllCaps="false"
+                            style="@style/button_athletics_directory_middle" />
+
+                        <Button
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/strength_training"
+                            android:id="@+id/strengthTraining"
+                            android:background="@drawable/menu_buttons"
+                            android:textAllCaps="false"
+                            style="@style/button_athletics_directory_middle" />
+
+                        <Button
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/track_and_field"
+                            android:id="@+id/trackField"
+                            android:background="@drawable/menu_buttons"
+                            android:textAllCaps="false"
+                            style="@style/button_athletics_directory_middle" />
+
+                        <Button
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/volleyball"
+                            android:id="@+id/volleyball"
+                            android:background="@drawable/menu_buttons"
+                            android:textAllCaps="false"
+                            style="@style/button_athletics_directory_middle" />
+
+                        <Button
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wrestling"
+                            android:id="@+id/wrestling"
+                            android:background="@drawable/menu_buttons"
+                            android:textAllCaps="false"
+                            style="@style/button_athletics_directory_bottom" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="5dp"
+                        android:id="@+id/yellowDivider"
+                        android:layout_below="@+id/sports"
+                        android:background="#ffffb800"
+                        android:layout_margin="10dp" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="216dp"
+                        android:orientation="horizontal"
+                        android:id="@+id/directoryButtons"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_below="@+id/yellowDivider">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:id="@+id/left"
+                            android:gravity="center_horizontal"
+                            android:layout_marginRight="2dp"
+                            android:layout_weight="1" >
+
+                            <Button
+                                android:layout_width="fill_parent"
+                                android:layout_height="0dp"
+                                android:text="@string/athletics_directory"
+                                android:id="@+id/athleticsDirectory"
+                                android:enabled="true"
+                                android:background="@drawable/menu_buttons"
+                                style="@style/button_top"
+                                android:textAllCaps="false"
+                                android:layout_weight=".33" />
+
+                            <Button
+                                android:layout_width="fill_parent"
+                                android:layout_height="0dp"
+                                android:text="@string/conference_directions"
+                                android:id="@+id/athleticDirections2"
+                                android:enabled="true"
+                                android:background="@drawable/menu_buttons"
+                                style="@style/button_middle"
+                                android:textAllCaps="false"
+                                android:layout_weight=".33" />
+
+                            <Button
+                                android:layout_width="fill_parent"
+                                android:layout_height="0dp"
+                                android:text="@string/athletics_apparel"
+                                android:id="@+id/apparel"
+                                android:enabled="true"
+                                android:background="@drawable/menu_buttons"
+                                style="@style/button_bottom"
+                                android:textAllCaps="false"
+                                android:paddingBottom="10dp"
+                                android:layout_weight=".33" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:id="@+id/right"
+                            android:gravity="center_horizontal"
+                            android:layout_marginLeft="2dp"
+                            android:layout_weight="1" >
+
+                            <Button
+                                android:layout_width="fill_parent"
+                                android:layout_height="0dp"
+                                android:text="@string/athletics_wissports"
+                                android:id="@+id/wissports"
+                                android:enabled="true"
+                                android:background="@drawable/menu_buttons"
+                                style="@style/button_top"
+                                android:textAllCaps="false"
+                                android:layout_weight=".33" />
+
+                            <Button
+                                android:layout_width="fill_parent"
+                                android:layout_height="0dp"
+                                android:text="@string/calendar"
+                                android:id="@+id/athleticsCalendar"
+                                android:enabled="true"
+                                android:background="@drawable/menu_buttons"
+                                style="@style/button_middle"
+                                android:textAllCaps="false"
+                                android:layout_weight=".33" />
+
+                            <Button
+                                android:layout_width="fill_parent"
+                                android:layout_height="0dp"
+                                android:text="@string/athletics_news"
+                                android:id="@+id/athleticsNews"
+                                android:enabled="true"
+                                android:background="@drawable/menu_buttons"
+                                style="@style/button_bottom"
+                                android:textAllCaps="false"
+                                android:layout_weight=".33" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="5dp"
+                        android:id="@+id/yellowLine2"
+                        android:background="#ffffb800"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_below="@+id/directoryButtons" />
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/conference_banners"
+                        android:contentDescription="@string/images"
+                        android:id="@+id/conference_banner2"
+                        android:layout_margin="10dp"
+                        android:layout_below="@+id/yellowLine2" />
+
+                </RelativeLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
