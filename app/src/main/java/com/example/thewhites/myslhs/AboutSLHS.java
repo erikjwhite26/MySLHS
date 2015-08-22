@@ -13,7 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class AboutSLHS extends Activity {
-//This is a test comment
+//why doesn't this work?
     ImageView mShorelandLogo;
     TextView mSubStatement;
     Button mMissionVision;
